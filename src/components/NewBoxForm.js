@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { v4 as uuidv4 } from 'uuid'; //Imports the uuid npm package. 
 
-
 class NewBoxForm extends Component {
   constructor(props) {
     super(props);
@@ -32,7 +31,7 @@ class NewBoxForm extends Component {
           <input
             type="text"
             name="height" /*Name must be the same as state value the input is meant to update.*/
-            value={this.state.height} /*The text within the input IS the state, this is what's displaying in the input as you type.*/
+            value={this.state.height} /*The text within the input IS the state, this is what's displaying in the input box as you type.*/
             id="height"
             onChange={this.handleChange}
           />

@@ -13,7 +13,7 @@ class Box extends Component {
   render() {
     return (
       <div>
-        <div style={{
+        <div style={{ /*The css styles of this div */
           height: this.props.height + "em",
           width: this.props.width + "em",
           backgroundColor: this.props.backgroundColor
