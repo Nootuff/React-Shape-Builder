@@ -1,6 +1,15 @@
 import React, { Component } from 'react'
 
 class Box extends Component {
+  constructor(props) {
+    super(props);
+    this.handleDelete = this.handleDelete.bind(this);
+  }
+
+  handleDelete() {
+    this.props.destroyerFunc(this.props.id); //Passes current box.id value back up to BoxList to be entered into the remove func. destroyerFunc is the property this function was passed in under. 
+  }
+
   render() {
     return (
       <div>
@@ -10,7 +19,7 @@ class Box extends Component {
           backgroundColor: this.props.backgroundColor
         }}>
         </div>
-        <button>X</button>
+        <button onClick={this.handleDelete}>X</button>
       </div>
     )
   }

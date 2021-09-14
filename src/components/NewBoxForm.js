@@ -20,7 +20,7 @@ class NewBoxForm extends Component {
     event.preventDefault(); //This method needs to be here to prevent the page reloading on form submit like it normally does as this would wipe the slate clean. 
     const newBox = {...this.state, id: uuidv4()}//This const holds everything in the state, all 3 values. It also includes a unique identifying number created by uuidv4 from uuid up above. both are passed to the creatorFunc to be passed back to BoxList. 
     
-    this.props.creatorFunc(newBox); //creatorFunc is the "create" function from BoxList passed in as a prop, this components' entire state has been passed in as an argument through newBox because... it is being passed back to BoxList? Looks like the  state that is updated as the user types with handleChange is passed back up to BoxList to be used in the create function there to ceate a new box with the values specified in this form. 
+    this.props.creatorFunc(newBox); //creatorFunc is the "create" function from BoxList passed in as a prop, this components' entire state has been passed in as an argument through newBox because... it is being passed back to BoxList? Looks like this component's state that is updated as the user types with handleChange is passed back up to BoxList to be used in the create function there to ceate a new box with the values specified in this form. 
     this.setState({height: "", width: "", backgroundColor: ""}); //Clears the form by setting state back to its defaults. 
   }
 
